@@ -8,8 +8,6 @@ $data = [
 ];
 //$result = file_put_contents($filename, "\n\n" . json_encode($data), FILE_APPEND);
 $result = file_put_contents($filename, "\n\n" . var_export($data, true), FILE_APPEND);
-if (!$result) {
-    echo 'Unable to write log file';
-}
-
-include $filename;
+//if (!$result) {
+//    echo 'Unable to write log file';
+//}

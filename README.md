@@ -1,4 +1,5 @@
 # request-logger-stub
 
-This project logs all requests to the server, except request to get "/" without parameters.
-on get request "/" list of requests is displayed.
+This project logs all requests to the server. \
+Logs are stored in the "log" directory. \
+You may see the logs e.g. by `tail -f {filename}` tool.
