@@ -1,9 +1,15 @@
 <?php
 
-$data = date('Y-d-m');
+const _FILE_EXTENSION = '.log';
+$filename = 'log/' . date('Y-d-m') . _FILE_EXTENSION;
 $data = [
     '$_SERVER' => $_SERVER,
     '$_REQUEST' => $_REQUEST,
 ];
+//$result = file_put_contents($filename, "\n\n" . json_encode($data), FILE_APPEND);
+$result = file_put_contents($filename, "\n\n" . var_export($data, true), FILE_APPEND);
+if (!$result) {
+    echo 'Unable to write log file';
+}
 
-file_put_contents('log/' . $data . '.log', $data, FILE_APPEND);
+include $filename;
