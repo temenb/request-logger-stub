@@ -1,7 +1,9 @@
 <?php
 
-const _FILE_EXTENSION = '.log';
-$filename = 'log/' . date('Y-d-m') . _FILE_EXTENSION;
+const FILE_EXTENSION = '.log';
+const LOG_DIR = 'log/';
+
+$filename = LOG_DIR . date('Y-d-m') . FILE_EXTENSION;
 $data = [
     '$_SERVER' => $_SERVER,
     '$_REQUEST' => $_REQUEST,
